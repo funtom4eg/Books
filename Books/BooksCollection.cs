@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Books
 {
-    public class BooksCollection : IEnumerable
+    public class BooksCollection
     {
         public List<Book> booksCollection;
         public static UI ui;
@@ -25,12 +25,7 @@ namespace Books
 
         public void ShowCollection()
         {
-            ui.ShowCollection(this);
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return this.booksCollection.GetEnumerator();
+            ui.ShowCollection(this.booksCollection);
         }
     }
 }

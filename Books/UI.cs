@@ -8,7 +8,7 @@ namespace Books
 {
     public class UI
     {
-        public void ShowCollection(BooksCollection booksCollection)
+        public void ShowCollection(List<Book> booksCollection)
         {
             int index = 1;
 
