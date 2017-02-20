@@ -7,21 +7,32 @@ using System.Threading.Tasks;
 
 namespace BooksWinforms
 {
-
-    public class MediaCollection
+    public class MediaCollection : IEnumerable
     {
-        public List<Media> collection;
+        private static int _uniqueId = 0;
 
-        public MediaCollection()
+        public List<Media> collection { get; } = new List<Media>();
+
+        public Media this[int index]
         {
-            collection = new List<Media>();
-
+            get
+            {
+                return collection[index];
+            }
         }
 
         public void Add(Media item)
         {
-            (this.collection).Add(item);
+            if (!collection.Contains(item))
+            {
+                collection.Add(item);
+                item.Id = _uniqueId++;
+            }
         }
 
+        public IEnumerator GetEnumerator()
+        {
+            return collection.GetEnumerator();
+        }
     }
 }
