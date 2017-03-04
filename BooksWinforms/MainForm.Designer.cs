@@ -32,6 +32,7 @@
             this.mediaListView = new System.Windows.Forms.ListView();
             this.SerializeBooksXML = new System.Windows.Forms.Button();
             this.SavePeriodicalsTxt = new System.Windows.Forms.Button();
+            this.AddNewItemButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // mediaCheckdListBox
@@ -80,11 +81,22 @@
             this.SavePeriodicalsTxt.UseVisualStyleBackColor = true;
             this.SavePeriodicalsTxt.Click += new System.EventHandler(this.SavePeriodicalsTxt_Click);
             // 
+            // AddNewItemButton
+            // 
+            this.AddNewItemButton.Location = new System.Drawing.Point(486, 8);
+            this.AddNewItemButton.Name = "AddNewItemButton";
+            this.AddNewItemButton.Size = new System.Drawing.Size(120, 23);
+            this.AddNewItemButton.TabIndex = 4;
+            this.AddNewItemButton.Text = "Add New Item...";
+            this.AddNewItemButton.UseVisualStyleBackColor = true;
+            this.AddNewItemButton.Click += new System.EventHandler(this.AddNewItemButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 487);
+            this.Controls.Add(this.AddNewItemButton);
             this.Controls.Add(this.SavePeriodicalsTxt);
             this.Controls.Add(this.SerializeBooksXML);
             this.Controls.Add(this.mediaListView);
@@ -103,6 +115,7 @@
         private System.Windows.Forms.ListView mediaListView;
         private System.Windows.Forms.Button SerializeBooksXML;
         private System.Windows.Forms.Button SavePeriodicalsTxt;
+        private System.Windows.Forms.Button AddNewItemButton;
     }
 }
 

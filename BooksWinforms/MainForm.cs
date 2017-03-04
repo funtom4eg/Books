@@ -16,7 +16,7 @@ namespace BooksWinforms
     [Serializable]
     public partial class MainForm : Form
     {
-        private MediaCollection _collection = new MediaCollection();
+        public MediaCollection _collection = new MediaCollection();
 
         private PropertyInfo[] _properties = typeof(Media).GetProperties();
 
@@ -149,6 +149,12 @@ namespace BooksWinforms
                 }
             }
             writer.Close();
+        }
+
+        private void AddNewItemButton_Click(object sender, EventArgs e)
+        {
+            AddNewItemForm addNewItemForm = new AddNewItemForm();
+            addNewItemForm.ShowDialog(this);
         }
     }
 }
