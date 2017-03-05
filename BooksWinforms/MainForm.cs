@@ -154,7 +154,9 @@ namespace BooksWinforms
         private void AddNewItemButton_Click(object sender, EventArgs e)
         {
             AddNewItemForm addNewItemForm = new AddNewItemForm();
-            addNewItemForm.ShowDialog(this);
+            addNewItemForm.Owner = this;
+            addNewItemForm.ShowDialog();
+            FillListView();
         }
     }
 }
